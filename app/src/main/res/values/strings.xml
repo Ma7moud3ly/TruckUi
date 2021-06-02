@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Truck</string>
+    <string name="tyre_no">Tyre Location</string>
+    <string name="rotation">Tyre Rotation</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="save">SAVE</string>
+    <string name="cancel">CANCEL</string>
+
+</resources>

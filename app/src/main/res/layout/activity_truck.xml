@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <!--sliding table container-->
+        <LinearLayout
+            android:id="@+id/drawer"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="@color/white"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:translationZ="3dp"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/table"
+                layout="@layout/table"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/save"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="@color/white"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:text="@string/save"
+                    android:textColor="@color/red" />
+
+                <Button
+                    android:id="@+id/cancel"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="@color/white"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:text="@string/cancel"
+                    android:textColor="@color/red" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <!--fixed truck container-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:translationZ="2dp">
+
+            <FrameLayout
+                android:id="@+id/car_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#2b2b2b">
+
+                <WebView
+                    android:id="@+id/car"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>
